@@ -86,6 +86,30 @@
       padding: 1rem;
       margin-top: 2rem;
     }
+
+    /* Graphic Design Gallery */
+.design-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.design-item {
+  text-align: center;
+}
+
+.design-item img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.design-item img:hover {
+  transform: scale(1.05);
+}
+
   </style>
 </head>
 <body>
@@ -120,6 +144,28 @@
     </div>
   </section>
 
+  <section id="designs">
+  <h2>Graphic Design Work</h2>
+  <div class="design-gallery">
+
+    <div class="design-item">
+      <img src="images/designs/poster1.png" alt="Poster Design">
+      <p>Poster design created in Adobe Illustrator</p>
+    </div>
+
+    <div class="design-item">
+      <img src="images/designs/logo1.png" alt="Logo Design">
+      <p>Logo concept designed in Photoshop</p>
+    </div>
+
+    <div class="design-item">
+      <img src="images/designs/banner.png" alt="Banner Design">
+      <p>Portfolio banner made in Adobe Illustrator</p>
+    </div>
+
+  </div>
+</section>
+
   <section id="contact">
     <h2>Contact</h2>
     <p>You can reach me at: <strong>layna.devalk@gmail.com</strong></p>
@@ -137,6 +183,7 @@
   </footer>
 </body>
 </html>
+
 
 
 

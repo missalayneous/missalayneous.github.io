@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alayna De Valk | Portfolio</title>
+  <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -89,11 +92,13 @@
 
     /* Thumbnail styling */
 .design-thumb {
-  max-width: 250px;
+  width: 100%;          /* scales down on smaller screens */
+  max-width: 300px;     /* never gets bigger than 300px */
+  height: auto;
+  display: block;
+  margin: 0 auto;       /* center horizontally */
   border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  cursor: pointer;
-  transition: transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .design-thumb:hover {
@@ -189,6 +194,14 @@
   background-color: #d5d5d5;
 }
 
+    .swiper-slide img {
+  width: 100%;
+  max-width: 500px;  
+  height: auto;
+  margin: 0 auto;
+}
+
+
   </style>
 </head>
 <body>
@@ -211,6 +224,7 @@
     </p>
   </section>
 
+  <!-- PROJECTS -->
   <section id="projects">
     <h2>Projects</h2>
     <div class="projects">
@@ -226,7 +240,7 @@
     </div>
   </section>
 
-  <section id="designs">
+  <!-- <section id="designs">
   <h2>Graphic Design Work</h2>
   <div class="design-gallery">
 
@@ -246,7 +260,7 @@
 </div>
 
     <!-- Lightbox container -->
-<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+<!-- <div id="lightbox" class="lightbox" onclick="closeLightbox()">
   <span class="close">&times;</span>
   <img class="lightbox-content" id="lightbox-img">
 </div>
@@ -257,7 +271,44 @@
     </div>
 
   </div>
+</section> -->
+
+  <section id="designs">
+  <h2>Graphic Design Work</h2>
+
+  <!-- Swiper container -->
+  <div class="swiper">
+    <!-- Wrapper for slides -->
+    <div class="swiper-wrapper">
+      
+      <div class="swiper-slide design-item">
+        <img src="images/designs/Mag_Page_Design.jpg" alt="Magazine Article">
+        <p>One page magazine article created in Adobe InDesign.</p>
+      </div>
+
+      <div class="swiper-slide design-item">
+        <img src="images/designs/Book_Jacket_Cover_Only.jpg" alt="Book Cover">
+        <p>Book jacket design.</p>
+      </div>
+
+      <div class="swiper-slide design-item">
+        <img src="images/designs/banner.png" alt="Banner Design">
+        <p>Portfolio banner made in Adobe Illustrator.</p>
+      </div>
+
+      <!-- Add more slides here -->
+
+    </div>
+
+    <!-- Navigation arrows -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- Pagination dots -->
+    <div class="swiper-pagination"></div>
+  </div>
 </section>
+
 
   <section id="contact">
     <h2>Contact</h2>
@@ -286,8 +337,34 @@ function closeLightbox() {
 }
 </script>
   
+  <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper-->
+  <script>
+  const swiper = new Swiper('.swiper', {
+    loop: true,                // makes it loop endlessly
+    spaceBetween: 30,          // spacing between slides
+    slidesPerView: 1,          // show 1 slide at a time
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+</script>
+
+
+  
 </body>
 </html>
+
+
+<!-- test commit -->
+
 
 
 

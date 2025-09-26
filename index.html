@@ -92,11 +92,13 @@
 
     /* Thumbnail styling */
 .design-thumb {
-  max-width: 250px;
+  width: 100%;          /* scales down on smaller screens */
+  max-width: 300px;     /* never gets bigger than 300px */
+  height: auto;
+  display: block;
+  margin: 0 auto;       /* center horizontally */
   border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  cursor: pointer;
-  transition: transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .design-thumb:hover {
@@ -191,6 +193,14 @@
 .btn-secondary:hover {
   background-color: #d5d5d5;
 }
+
+    .swiper-slide img {
+  width: 100%;
+  max-width: 500px;  
+  height: auto;
+  margin: 0 auto;
+}
+
 
   </style>
 </head>
@@ -354,6 +364,7 @@ function closeLightbox() {
 
 
 <!-- test commit -->
+
 
 
 
